@@ -1,0 +1,1058 @@
+1-Faça um Programa que mostre a mensagem "Alo mundo" na tela.
+print("Olá Mundo")
+---------------------------------------------------------------
+2-Faça um Programa que peça um número e então mostre a mensagem O número informado foi [número].
+numero = int(input("Informe um número "))
+print("O número é: ", numero)
+---------------------------------------------------------------
+3- Faça um Programa que peça dois números e imprima a soma.
+num1 = int(input("Informe o primeiro número "))
+num2 = int(input("Informe o segundo número "))
+soma = num1 + num2
+
+print("A soma dos dois números é: ", soma)
+---------------------------------------------------------------
+4- Faça um Programa que peça as 4 notas bimestrais e mostre a média.
+nota1 = float(input("Informe a 1º Nota"))
+nota2 = float(input("Informe a 2º Nota"))
+nota3 = float(input("Informe a 3º Nota"))
+nota4 = float(input("Informe a 4º Nota"))
+media = (nota1 + nota2 + nota3 + nota4) / 4
+
+print("A média é: ", media)
+---------------------------------------------------------------
+
+5- Faça um Programa que converta metros para centímetros
+metros = float(input("Informe a quantidade de metros: "))
+conversao_cm = metros * 100
+print(f"O valor dos metros em centímetros é: {conversao_cm:.0f}")
+
+---------------------------------------------------------------
+6- Faça um Programa que peça o raio de um círculo, calcule e mostre sua área.
+raio = float(input("Informe o raio do círculo"))
+area = 3.14 * (raio**2)
+
+print(f"A área do círculo é: {area}")
+---------------------------------------------------------------
+7- Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
+lado = float(input("Informe a medida do lado "))
+area = pow(lado, 2)
+print(f"A área do quadrado é: {area}")
+---------------------------------------------------------------
+8- Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
+lado = float(input("Informe a medida do lado "))
+area = pow(lado, 2)
+
+print(f"O dobro da área do quadrado é: {area * 2}")
+---------------------------------------------------------------
+9- Faça um Programa que peça a temperatura em graus Fahrenheit, transforme e mostre a temperatura em graus Celsius.
+C = 5 * ((F-32) / 9).
+graus_f = float(input("Informe os graus "))
+conversao_celsius = 5 * ((graus_f - 32) / 9)
+
+print(
+    f"{graus_f:.2f}º em Fahrenheit equivalem a {conversao_celsius:.2f}º em Celsius"
+)
+---------------------------------------------------------------
+10- Faça um Programa que peça a temperatura em graus Celsius, transforme e mostre em graus Fahrenheit.
+grau_em_celsius = float(input("Informe os graus em Celsius "))
+conversao_em_f = (grau_em_celsius *1.8) + 32
+
+print(f"{grau_em_celsius:.2f}º equivalem a {conversao_em_f:.2f}º em Fahrenheit")
+---------------------------------------------------------------
+
+11- Faça um Programa que peça 2 números inteiros e um número real. Calcule e mostre:
+a- o produto do dobro do primeiro com metade do segundo.
+b- a soma do triplo do primeiro com o terceiro.
+c- o terceiro elevado ao cubo.
+int_1 = int(input("Informe um número "))
+int_2 = int(input("Informe um número "))
+real = float(input("Informe um número real "))
+
+resp_a = (2 * int_1) * (int_2 / 2)
+resp_b = (real * 3) + int_1
+resp_c = pow(real, 3)
+
+print(f"Resposta da primeira questão: {resp_a}")
+print(f"Resposta da segunda questão: {resp_b}")
+print(f"Resposta da terceira questão: {resp_c:.2f}")
+---------------------------------------------------------------
+#12 - Tendo como dados de entrada a altura de uma pessoa, construa um algoritmo que calcule seu peso ideal, 
+#usando a seguinte fórmula: (72.7*altura) - 58
+altura = float(input("Informe a sua altura" ))
+peso_ideal = (72.7 * altura) - 58
+print(f"O peso ideal é: {peso_ideal:.2f}")
+---------------------------------------------------------------
+
+13 - Tendo como dado de entrada a altura (h) de uma pessoa, construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+Para homens: (72.7*h) - 58
+Para mulheres: (62.1*h) - 44.7
+altura = float(input("Informe a altura" ))
+
+sexo = int(input("Informe o sexo - Masculino (1) Feminino (0)"))
+if sexo == 1:
+  peso_ideal = (72.7 * altura) - 58
+else:
+  peso_ideal = (62.1 * altura) - 44.7
+
+print(f"O peso ideal para voce é: {peso_ideal:.2f}")
+---------------------------------------------------------------
+
+14 - João Papo-de-Pescador, homem de bem, comprou um microcomputador para controlar o rendimento diário de seu trabalho. Toda vez que ele traz um peso de peixes maior que o estabelecido pelo regulamento de pesca do estado de São Paulo (50 quilos) deve pagar uma multa de R$ 4,00 por quilo excedente. João precisa que você faça um programa que leia a variável peso (peso de peixes) e calcule o excesso. Gravar na variável excesso a quantidade de quilos além do limite e na variável multa o valor da multa que João deverá pagar. Imprima os dados do programa com as mensagens adequadas.
+
+limite = 50
+multa_per_kg= 4
+peso = float(input("Digite o peso dos peixes" ))
+excesso = 0
+multa = 0
+
+if peso > limite:
+  excesso = peso - limite
+  multa = excesso * multa_per_kg
+  print(f"O valor da multa a ser pago é: {multa:.2f}")
+else:
+  print("Não há multa a ser paga")
+---------------------------------------------------------------
+
+15 - Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês, sabendo-se que são descontados 11% para o Imposto de Renda, 8% para o INSS e 5% para o sindicato, faça um programa que nos dê:
+salário bruto.
+quanto pagou ao INSS.
+quanto pagou ao sindicato.
+o salário líquido.
+calcule os descontos e o salário líquido, conforme a tabela abaixo
+
+valor_por_hora = float(input("Informe o valor ganho por hora "))
+horas_por_mes = float(input("Informe o número de horas trabalhadas por mês"))
+salario_bruto = valor_por_hora * horas_por_mes
+inss = salario_bruto * 0.08
+sindicato = salario_bruto * 0.05
+ir = salario_bruto * 0.11
+salario_liquido = salario_bruto - (inss + sindicato + ir)
+
+print("Salario bruto = ", salario_bruto)
+print("valor pago ao inss = ", inss)
+print("valor pago ao sindicato = ", sindicato)
+print("Salario liquido = ", salario_liquido)
+---------------------------------------------------------------
+
+16 - Faça um programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00. Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total.
+
+metros = int(input("informe quantos metros serão pintados "))
+litros = metros / 3
+latas_usadas = 0
+preco_total = 0
+
+if litros <= 18:
+  latas_usadas = 1
+  preco_total = latas_usadas * 80
+else:
+  latas_usadas = round(litros / 18)
+  preco_total = latas_usadas * 80
+
+print(f"foram usadas {latas_usadas} latas e o preço é {preco_total}")
+
+
+---------------------------------------------------------------
+17 - Faça um Programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. Considere que a cobertura da tinta é de 1 litro para cada 6 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00 ou em galões de 3,6 litros, que custam R$ 25,00.
+Informe ao usuário as quantidades de tinta a serem compradas e os respectivos preços em 3 situações:
+comprar apenas latas de 18 litros;
+comprar apenas galões de 3,6 litros;
+misturar latas e galões, de forma que o desperdício de tinta seja menor. Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, considere latas cheias.
+
+
+metros_para_pintar = float(input("informe os metros a serem pintados "))
+valor_galao18 = 80
+valor_galao3 = 25
+preco_a_pagar = 0
+litros_gastos = metros_para_pintar /6
+total_ambos = 0
+
+total18 = round(litros_gastos / 18)
+if total18 <1:
+    total18 = 1
+    preco_a_pagar = valor_galao18 * total18
+    print(f"Usando galoes de 18l - usado {total18:.0f} Galão, Valor:{preco_a_pagar:.0f} ")
+else:
+    preco_a_pagar = valor_galao18 * total18
+    print(f"Usando galoes de 18l - usados {total18:.0f} Galões, Valor:{preco_a_pagar:0f} ")
+
+total3 = round(litros_gastos / 3.6)
+if total3 < 1:
+    total3 = 1
+    preco_a_pagar = valor_galao3 * total3
+    print(f"Usando galoes de 3.6l - Usado {total3:.0f} Galao, Valor: {preco_a_pagar:.0f}")
+else:
+    preco_a_pagar = valor_galao3 * total3
+    print(f"Usando galoes de 3.6l - Usados {total3:.0f} Galões,  Valor: {preco_a_pagar:.0f}")
+
+
+if litros_gastos >=18:
+    total18 = litros_gastos / 18
+    resto = litros_gastos % 18
+    valor18 = total18 * valor_galao18
+    if resto == 0:
+        print(f"Foram gastos {total18:.0f} galões de 18l e o valor é {valor18:.0f}")
+    elif resto <= 3.6:
+        valor3 =  valor_galao3 + valor18
+        print(f"Foram gastos {total18:.0f} Galões de 18l , {total3:.0f} Galão de 3.6l e o valor é {valor3:.0f}")
+    else:
+        total3 = round(resto / 3.6)
+        valor3 = (valor_galao3 * total3) + valor18
+        print(f"foram gastos{total18:.0f} galoes de 18l, {total3:.0f} galoes de 3l e o valor é {valor3:.0f}")
+else:
+    total3 = (litros_gastos / 3.6)
+    if total3 <=1:
+        print(f"Foi gasto 1 galao de 3.6l e o valor é {valor_galao3:.0f}")
+    else:
+        valor3 = total3 * valor_galao3
+        print(f"foram gastos {total3:.0f} galoes de 3.6l e o valor é {valor3:.0f}")
+
+--------------------------------------------------------------------------------------------------
+
+18 - Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link d
+e Internet (em Mbps), calcule e informe o tempo aproximado de download do arquivo usando este link (em minutos).
+
+tamanho_do_arquivo = float(input("informe o tamanho do arquivo "))
+velocidade_internet = float(input("Informe a velocidade da internet "))
+tempo_download = tamanho_do_arquivo / velocidade_internet
+conversao_minutos = 0
+
+if tempo_download < 60:
+    print("O tempo de download é 1 minuto")
+else:
+    conversao_minutos = tempo_download / 60
+    if tempo_download % 60 != 0:
+        conversao_minutos +=1
+        print(f"O tempo de Download é {conversao_minutos} minutos")
+    else:
+        print(f"O tempo de Download é {conversao_minutos} minutos")
+------------------------------------------------------------------------------------------------------
+19 - Faça um Programa que peça dois números e imprima o maior deles.
+
+numero = float(input("Informe um número: "))
+numero2 = float(input("Informe outro número: "))
+
+if numero > numero2:
+    print(f"O maior número é: {numero}")
+else:
+    print(f"O maior número é: {numero2}")
+
+---------------------------------------------------------------
+
+#20 - Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
+
+numero = float(input("informe um numero"))
+if numero >=0:
+    print("O número é positivo")
+else:
+    print("O número é negativo")
+
+-------------------------------------------------------------------
+21 - Faça um Programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido.
+
+letra = input("Informe F ou M" ).strip().upper()
+if letra == "M":
+    print("Masculino")
+elif letra == "F":
+    print("Feminino")
+else:
+    print("Sexo inválido")
+-----------------------------------------------------------------
+22 - Faça um Programa que verifique se uma letra digitada é vogal ou consoante.
+
+letra = input("Digite uma letra ").strip()
+vogais = ["a", "e", "i", "o", "u"]
+
+if letra not in vogais:
+    print("É uma consoante")
+else:
+    print("É uma vogal")
+
+----------------------------------------------------------------
+#    23 - Faça um programa para a leitura de duas notas parciais de um aluno. 
+# O programa deve calcular a média alcançada por aluno e apresentar:
+#A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+#A mensagem "Reprovado", se a média for menor do que sete;
+#A mensagem "Aprovado com Distinção", se a média for igual a dez.
+
+nota1 = float(input("digite a primeira nota "))
+nota2 = float(input("digite a segunda nota "))
+media = (nota1 + nota2) / 2
+
+if media == 10:
+    print("Aprovado com distinção")
+elif media < 7:
+    print('Reprovado')
+else:
+    print("Aprovado")
+---------------------------------------------------------------------
+#24 - Faça um Programa que leia três números e mostre o maior deles.
+
+num1= int(input("informe um numero "))
+num2= int(input("informe um numero "))
+num3= int(input("informe um numero "))
+
+
+if num2 > num1 and num2 > num3:
+    print(f"O maior é o {num2}")
+elif num3> num1 and num3 > num2:
+    print(f"O maior é o {num3}")
+else:
+    print(f'O maior é o {num1}')
+    
+
+----------------------------------------
+#25 - Faça um Programa que leia três números e mostre o maior e o menor deles.
+
+num1 = float(input("digite um numero: "))
+num2 = float(input("digite um numero: "))
+num3 = float(input("digite um numero: "))
+maior = 0
+menor = 0
+
+if num1 > num2 and num1 > num3:
+    maior = num1
+elif num2 > num1 and num2 > num3:
+    maior = num1
+else:
+    maior = num3
+
+if num1 < num2 and num1 <num3:
+    menor = num1
+elif num2< num1 and num2 < num3:
+    menor = num2
+else:
+    menor = num3
+
+print(f"O maior número é: {maior}")
+print(f"O menor número é {menor}")
+-------------------------------------------
+
+#26 - Faça um programa que pergunte o preço de três produtos e informe qual produto 
+# você deve comprar, sabendo que a decisão é sempre pelo mais barato.
+
+prod1 = float(input("informe o valor do 1º produto"))
+prod2 = float(input("informe o valor do 2º produto"))
+prod3 = float(input("informe o valor do 3º produto"))
+menor = 0
+
+if prod1<prod2 and prod1 < prod3:
+    menor = prod1
+elif prod2 < prod1 and prod2 < prod3:
+    menor = prod2
+else:
+    menor = prod3
+
+print(f"o produto mais barato é {menor}")
+
+-------------------------------------------------
+
+#27 - Faça um Programa que leia três números e mostre-os em ordem decrescente.
+lista = []
+
+num1 = lista.append(int(input("Informe o primeiro numero ")))
+num2 = lista.append(int(input("Informe o segundo numero ")))
+num3 = lista.append(int(input("Informe o primeiro numero ")))
+
+
+maior = max(lista)
+menor = min(lista)
+lista.remove(max(lista))
+lista.remove(min(lista))
+meio = lista[0]
+
+print("Imprimindo os numeros em ordem crescente")
+print(menor)
+print(meio)
+print(maior)
+
+------------------------------------------------
+
+#28 - Faça um Programa que pergunte em que turno você estuda. 
+# Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!",
+#  "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+
+turno = input("Qual horário voce estuda :\n M-matutino ou V-Vespertino ou N- Noturno? ").upper()
+mensagem = ""
+if turno == "M":
+    mensagem = "Bom dia!"
+elif turno == "V":
+    mensagem = "Boa tarde !"
+else:
+    mensagem = "Boa noite !"
+
+print(mensagem)
+
+----------------------------------------------
+
+#29 - As Organizações Tabajara resolveram dar um aumento de salário aos seus 
+# colaboradores e lhe contraram para desenvolver o programa que calculará os reajustes.
+#Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte 
+# critério, baseado no salário atual:
+#salários até R$ 280,00 (incluindo) : aumento de 20%
+#salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
+#salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
+#salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado, informe na tela:
+#o salário antes do reajuste;
+#o percentual de aumento aplicado;
+#o valor do aumento;
+#o novo salário, após o aumento.
+
+salario = float(input("Informe o salario\n"))
+aumento = 0
+percentual_aumento = 0
+salario_final = 0
+
+if salario <= 200:
+    percentual_aumento = 0.2
+    salario_final = salario + (salario * percentual_aumento)
+    aumento = salario_final - salario
+elif salario <=700:
+    percentual_aumento = 0.15
+    salario_final = salario + (salario * percentual_aumento)
+    aumento = salario_final - salario
+elif salario <= 1500:
+    percentual_aumento = 0.1
+    salario_final = salario + (salario * percentual_aumento)
+    aumento = salario_final - salario
+else:
+    percentual_aumento = 0.05
+    salario_final = salario + (salario * percentual_aumento)
+    aumento = salario_final - salario
+
+print(f"Salário inicial: {salario}")
+print(f"Percentual de aumento: {percentual_aumento}%")
+print(f"Aumento: {aumento}")
+print(f"Salário final: {salario_final}")
+
+-------------------------------------------------------------
+#30 - Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês.
+#Desconto do IR:
+#Salário Bruto até 900 (inclusive) - isento
+#Salário Bruto até 1500 (inclusive) - desconto de 5%
+#Salário Bruto até 2500 (inclusive) - desconto de 10%
+#Salário Bruto acima de 2500 - desconto de 20% Imprima na tela as informações, dispostas conforme o exemplo abaixo. No exemplo o valor da hora é 5 e a quantidade de hora é 220.
+
+quantidade_horas = float(input("Informe a quantidade de horas trabalhadas: "))
+valor_hora = float(input("Informe o valor da hora: "))
+salario_bruto = quantidade_horas * valor_hora
+ir = 0
+sindicato = 0.03
+fgts = 0.11 * salario_bruto
+salario_liquido = 0
+
+if salario_bruto <= 900:
+  salario_liquido = salario_bruto - ((ir * salario_bruto) + (sindicato * salario_bruto))
+elif salario_bruto <= 1500:
+  ir = 0.05
+  salario_liquido = salario_bruto - ((ir * salario_bruto) + (sindicato * salario_bruto))
+elif salario_bruto <= 2500:
+  ir = 0.10
+  salario_liquido = salario_bruto - ((ir * salario_bruto) + (sindicato * salario_bruto))
+else:
+  ir = 0.20
+  salario_liquido = salario_bruto - ((ir * salario_bruto) + (sindicato * salario_bruto))
+
+print(f"O valor do salário bruto é: {salario_bruto}")
+print(f"O valor do salário líquido é: {salario_liquido}")
+print(f"O valor do FGTS é: {fgts}")
+
+---------------------------------------------------------------------------
+#31 - Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
+
+num = int(input("Informe um número de 1 a 7 correspondente aos dias da semana\n"))
+dias = ["", "Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
+if num <1 or num >7:
+  print("Número inválido")
+else:
+  print(dias[num])
+  
+----------------------------------------------------------------------------
+#32 - Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
+#Dicas:
+#Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro;
+#Triângulo Equilátero: três lados iguais;
+#Triângulo Isósceles: quaisquer dois lados iguais;
+#Triângulo Escaleno: três lados diferentes;
+
+lado1 = float(input("Informe o primeiro lado"))
+lado2 = float(input("Informe o segundo lado"))
+lado3 = float(input("Informe o terceiro lado"))
+
+if lado1 + lado2 > lado3 and lado2 + lado3 + lado1 and lado3 + lado1 > lado2:
+  if lado1 == lado2 == lado3:
+    print("É um triângulo Equilátero")
+  elif lado1 != lado2 and lado1 != lado3 and lado3 != lado2:
+    print("É um triângulo Escaleno")
+  else:
+    print("É um triângulo Isósceles")
+else:
+  print("Não é um triângulo")
+------------------------------------------------------------
+#33 - Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações:
+#Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve fazer pedir os demais valores, sendo #encerrado;
+#Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao usuário e encerre o programa;
+#Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário;
+#Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;
+
+a = int(input("Informe o valor de A"))
+if a == 0:
+  print("Programa encerrado")
+  exit()
+
+b = int(input("Informe o valor de B"))
+c = int(input("Informe o valor de C"))
+
+delta = (b * b) * (4 * a * c)
+
+if delta < 0:
+  print("A equação não possui raizes reais")
+  exit()
+elif delta == 0:
+  print("A equação possui apenas uma raiz")
+else:
+  print("A equação possui duas raízes reais")
+---------------------------------------------------
+#34 - Faça um Programa que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou não bissexto.
+
+ano = int(input("Informe o ano"))
+
+if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
+  print("O ano é bissexto")
+else:
+  print("O ano não é bissexto")
+-----------------------------------------------
+#35 - Faça um Programa que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida.
+
+data = input("informe uma data ")
+dia = int(data[0:2])
+mes = int(data[3:5])
+ano = int(data[6:])
+
+if (dia < 1 or dia > 30) or (mes < 1 or mes > 12) or (ano < 0):
+  print("Data inválida")
+else:
+  print("Data válida!\n")
+  print(f"{dia} / {mes} / {ano}")
+-----------------------------------------------
+
+#36 - Faça um Programa que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.
+#Observando os termos no plural a colocação do "e", da vírgula entre outros. Exemplo:
+#326 = 3 centenas, 2 dezenas e 6 unidades
+#12 = 1 dezena e 2 unidades Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
+
+numero = int(input("Informe um número  "))
+centena = 0
+dezena = 0
+unidade = 0
+plural = "s"
+msg_centena = "centena"
+msg_dezena = "dezena"
+msg_unidade = "unidade"
+
+if numero > 99:
+  centena = numero // 100
+  if numero % 100 == 0:
+    dezena = 0
+  elif numero % 100 != 0:
+    dezena = (numero % 100) // 10
+    if dezena % 10 == 0:
+      unidade = 0
+    else:
+      unidade = (numero % 100) - (10* dezena)
+else:
+  centena = 0
+  if numero % 100 == 0:
+    dezena = 0
+  elif numero % 100 != 0:
+    dezena = (numero % 100) // 10
+    if dezena % 10 == 0:
+      unidade = 0
+    else:
+      unidade = (numero % 100) - (10* dezena)
+
+if centena > 1:
+  msg_centena = msg_centena + plural
+if dezena > 1:
+  msg_dezena = msg_dezena + plural
+if unidade > 1:
+  msg_unidade = msg_unidade + plural
+
+print(f"{centena} - {msg_centena}")
+print(f"{dezena} - {msg_dezena}")
+print(f"{unidade} - {msg_unidade}")
+-----------------------------------------------------------------
+
+#38 - Faça um Programa para um caixa eletrônico. O programa deverá perguntar
+#  ao usuário a valor do saque e depois informar quantas notas de cada valor
+#  serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais.
+#  O valor mínimo é de 10 reais e o máximo de 600 reais. O programa não deve se
+#  preocupar com a quantidade de notas existentes na máquina.
+#Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100,
+#uma nota de 50, uma nota de 5 e uma nota de 1;
+#Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100,
+#uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
+
+valor_saque = int(input("Informe o valor do saque"))
+notas_100 = 0
+notas_50 = 0
+notas_10 = 0
+notas_5 = 0
+notas_1 = 0
+resto = 0
+plural100 = "nota"
+plural50 = "nota"
+plural10 = "nota"
+plural5 = "nota"
+plural1 = "nota"
+
+if valor_saque>=100:
+    notas_100 = valor_saque // 100
+    resto = valor_saque % 100
+    if resto >=50:
+        notas_50 = resto // 50
+        resto = resto % 50
+        if resto >=10:
+            notas_10 = resto // 10
+            resto = resto % 10
+            if resto >= 5:
+                notas_5 = resto // 5
+                resto = resto % 5
+                notas_1 = resto
+            else:
+                notas_1 = resto
+        elif resto >= 5:
+            notas_5 = resto // 5
+            resto = resto % 5
+            notas_1 = resto
+        else:
+            notas_1 = resto
+    elif resto >=10:
+        notas_10 = resto // 10
+        resto = resto % 10
+        if resto >=5:
+            notas_5 = resto // 5
+            resto = resto % 5
+            notas_1 = resto
+        else:
+            notas_1 = resto
+elif valor_saque >= 50:
+    notas_50 = valor_saque // 50
+    resto = valor_saque % 50
+    if resto >=10:
+        notas_10 = resto // 10
+        resto = resto % 10
+        if resto >=5:
+            notas_5 = resto // 5
+            resto = resto % 5
+            notas_1 = resto
+        else:
+            notas_1 = resto
+    elif resto >= 5:
+        notas_5 = resto // 5
+        resto = resto % 5
+        notas_1 = resto
+    else:
+        notas_1 = resto
+elif valor_saque >= 10:
+    notas_10 = valor_saque // 10
+    resto = valor_saque % 10
+    if resto >=5:
+        notas_5 = resto // 5
+        resto = resto % 5
+        notas_1 = resto
+    else:
+        notas_1 = resto
+elif valor_saque >= 5:
+    notas_5 = valor_saque // 5
+    notas_1 = valor_saque % 5
+else:
+    notas_1 = valor_saque
+    
+if notas_1 > 1:
+    plural1 = "notas"
+
+if notas_100 > 1:
+    plural100 = "notas"
+
+if notas_5 > 1:
+    plural5 = "notas"
+
+if notas_10 > 1:
+    plural10 = "notas"
+
+print(f"{notas_100} {plural100} de 100 reais")
+print(f"{notas_50} {plural50} de 50 reais")
+print(f"{notas_10} {plural10} de 10 reais")
+print(f"{notas_5} {plural5} de 5 reais")
+print(f"{notas_1} {plural1} de 1 real")
+---------------------------------------------------------------
+
+​
+#39 - Faça um Programa que peça um número inteiro e 
+# determine se ele é par ou impar. Dica: utilize o operador módulo (resto da divisão).
+
+num = int(input("Informe um numero "))
+
+if num % 2 == 0:
+    print("o número é par")
+else:
+    print("O número é ímpar")
+--------------------------------------------------------------
+#40 - Faça um Programa que peça um número e informe se 
+# o número é inteiro ou decimal. Dica: utilize uma função de arredondamento.
+
+num = float(input("informe um número "))
+
+if round(num) == num:
+    print("o número é inteiro")
+else:
+    print("O número é decimal")
+----------------------------------------------------------
+
+#41 - Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar.
+#  O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+#par ou ímpar;
+#positivo ou negativo;
+#inteiro ou decimal.
+
+resultado = 0
+num1 = float(input("informe o primeiro numero "))
+num2 = float(input("Informe o segundo número "))
+operação = int(input("informe qual a operação\n: Soma (1)\nSubtração(2)\nDivisão(3)\nMultiplicação(4)"))
+
+if operação == 1:
+    resultado = num1 + num2
+elif operação == 2:
+    resultado = num1 - num2
+elif operação == 3:
+    resultado = num1 / num2
+else:
+    resultado = num1 * num2
+
+par_impar = ""
+posi_negati = ""
+inteiro_decimal = ""
+
+if resultado % 2 == 0:
+    par_impar = "Par"
+else:
+    par_impar = "Ímpar"
+
+if resultado < 0:
+    posi_negati = "Negativo"
+else:
+    posi_negati = "Positivo"
+
+if int(resultado) == resultado:
+    inteiro_decimal = "Inteiro"
+else:
+    inteiro_decimal = "Decimal"
+
+print(f"O resultado é: {resultado}")
+print(f"O número é: {inteiro_decimal}, {par_impar} e {posi_negati}")
+
+-----------------------------------------------------------------------------
+#42 - Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+#"Telefonou para a vítima?"
+#"Esteve no local do crime?"
+#"Mora perto da vítima?"
+#"Devia para a vítima?"
+#"Já trabalhou com a vítima?" O programa deve no final emitir uma classificação sobre 
+#a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela
+#deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". 
+#Caso contrário, ele será classificado como "Inocente".
+
+print("Responda as perguntas a seguir com sim (1) ou não (0)")
+p1 = int(input("Telefonou para a vítima? "))
+p2 = int(input("Esteve no local do crime? "))
+p3 = int(input("Mora perto da vítima? "))
+p4 = int(input("Devia para a vítima? "))
+p5 = int(input("Já trabalhou com a vítima? "))
+
+soma = p1 + p2 + p3 + p4 + p5
+print(soma)
+if soma == 2:
+    print("Suspeita")
+elif soma >=3 and soma <=4 :
+    print("Cúmplice")
+elif soma == 5:
+    print("Assassino")
+else:
+    print("Inocente")
+
+----------------------------------------------------------------------------------------------------
+
+
+#43 - Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+#Álcool:
+#até 20 litros, desconto de 3% por litro
+#acima de 20 litros, desconto de 5% por litro
+#Gasolina:
+#até 20 litros, desconto de 4% por litro
+#acima de 20 litros, desconto de 6% por litro Escreva um algoritmo que leia o número
+# de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina),
+#  calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina
+#  é R$ 2,50 o preço do litro do álcool é R$ 1,90.
+
+preco_litro_alcool = 1.90
+preco_litro_gaso = 2.50
+tipo_combustivel = input("escolha o tipo de combustível Gasolina (g) Álcoll (a)").upper()
+litros_vendidos = float(input("Informe os litros vendidos "))
+valor_pago = 0
+
+if tipo_combustivel == "G":
+    if litros_vendidos <= 20:
+        valor_pago = preco_litro_gaso * litros_vendidos - ((preco_litro_gaso * litros_vendidos)* 0.04)
+    else: 
+        valor_pago = preco_litro_gaso * litros_vendidos - ((preco_litro_gaso * litros_vendidos)* 0.06)
+
+if tipo_combustivel == "A":
+    if litros_vendidos <= 20:
+        valor_pago = preco_litro_alcool * litros_vendidos - ((preco_litro_alcool * litros_vendidos)*0.03)
+    else: valor_pago = preco_litro_alcool * litros_vendidos - ((preco_litro_alcool * litros_vendidos)*0.05)
+
+print(f"O valor pago é: {valor_pago}")
+
+-----------------------------------------------------------------
+
+#45 - Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual
+#  ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações
+
+usuario = input("Informe um usuário: ")
+senha = input("Informe a senha: ")
+
+while usuario == senha:
+    print("O nome de usuário não pode ser igual a senha. Insira outro valor")
+    usuario = input("Informe um usuário: ")
+    senha = input("Informe a senha: ")
+
+print("Login realizado com sucesso!")
+
+----------------------------------------------------------
+#46 - Faça um programa que leia e valide as seguintes informações:
+#Nome: maior que 3 caracteres;
+#Idade: entre 0 e 150;
+#Salário: maior que zero;
+#Sexo: 'f' ou 'm';
+#Estado Civil: 's', 'c', 'v', 'd';
+
+nome = input("Informe o nome: ")
+while len(nome) < 3:
+    print("Nome inválido! O nome precisa ter mais que três caracateres")
+    nome = input("Informe o nome: ")
+
+
+idade = int(input("Informe a idade: "))
+while idade < 0 or idade > 150:
+    print("Idade inválida")
+    idade = int(input("Informe a idade: "))
+
+salario = float(input("Informe o salário: "))
+while salario < 0:
+    print("Salario invalido")
+    salario = float(input("Informe o salário: "))
+
+sexo = input("Informe o sexo: Masculino (m) Feminino (f)").upper()
+while sexo != "M" and sexo != "F":
+    print("Sexo inválido!")
+    sexo = input("Informe o sexo: Masculino (m) Feminino (f)").upper()
+
+lista_e_civil = ["s", "c", "v", "d"]
+e_civil = input("informe o estado civil: solteiro(s) casado(c) viúvo(v) divorciado(d)")
+while e_civil not in lista_e_civil:
+    print("Estado civil inválido")
+    e_civil = input("informe o estado civil: solteiro(s) casado(c) viúvo(v) divorciado(d)")
+
+print("Informações inseridas com sucesso")
+-------------------------------------------------------------------------------------
+
+#47 - Supondo que a população de um país A seja da ordem de 80000 habitantes 
+# com uma taxa anual de crescimento de 3% e que a população de B seja 200000
+#  habitantes com uma taxa de crescimento de 1.5%. Faça um programa que calcule
+#  e escreva o número de anos necessários para que
+#  a população do país A ultrapasse ou iguale a população do país B, mantidas as taxas de crescimento.
+
+pop_a = 80000
+pop_b = 200000
+cresc_a = 0.03
+cresc_b = 0.015
+ano = 0
+
+while pop_a < pop_b:
+    pop_a = pop_a + (pop_a * cresc_a)
+    pop_b = pop_b + (pop_b * cresc_b)
+    ano += 1
+
+print(f"Levará {ano} anos")
+print(f"População A = {pop_a:.0f}\nPopulação B = {pop_b:.0f}")
+
+------------------------------------------------------------------------------
+48 - Altere o programa anterior permitindo ao usuário informar as populações e as taxas
+ de crescimento iniciais. Valide a entrada e permita repetir a operação.
+
+validacao = True
+
+while validacao == True:
+    pop_a = int(input("Informe a população do país A: "))
+    while pop_a < 0 :
+        print("Número inválido")
+        pop_a = int(input("Informe a população do país A: "))
+    
+    pop_b = int(input("Informe a população do país B: "))
+    while pop_b < 0:
+        print("Número inválido")
+        pop_b = int(input("Informe a população do país B: "))
+
+    
+    cresc_a = float(input("Informe a taxa de crescimento do país A: "))
+    while cresc_a < 0:
+        print("informe um número válido")
+        cresc_a = float(input("Informe a taxa de crescimento do país A: "))
+
+    cresc_b = float(input("Informe a taxa de crescimento do país B: "))
+    while cresc_b < 0:
+        print("informe um número válido")
+        cresc_b = float(input("Informe a taxa de crescimento do país B: "))
+
+    ano = 0
+
+    while pop_a < pop_b:
+        pop_a = pop_a + (pop_a * cresc_a)
+        pop_b = pop_b + (pop_b * cresc_b)
+        print(pop_a, pop_b)
+        ano += 1
+
+    print(f"Levará {ano} anos")
+    print(f"População A = {pop_a:.0f}\nPopulação B = {pop_b:.0f}")
+
+    validacao = input("Deseja verificar mais dados? Sim (1) Não (0)")
+-------------------------------------------------------------------------------
+#49 - Faça um programa que imprima na tela os números de 1 a 20, um abaixo do 
+# outro. Depois modifique o programa para que ele mostre os números um ao lado do outro.
+
+for i in range (21):
+    print(i)
+
+for i in range(21):
+    print(i, end=", ")
+-------------------------------------------------------------------------------
+
+#50 - Faça um programa que leia 5 números e informe o maior número.
+
+lista = []
+for i in range (0,5):
+    lista.append(int(input("Informe um número ")))
+
+maior = max(lista)
+print(f"O maior número é: {maior}")
+-------------------------------------------------------------------------------
+#51 - Faça um programa que leia 5 números e informe a soma e a média dos números
+
+i = 0
+lista = []
+while i < 5:
+    lista.append(int(input("Informe um número: ")))
+    i +=1
+
+soma = sum(lista)
+media  = soma / len(lista)
+
+print(f"a Soma é: 
+print(f"A média é: {media}")
+
+--------------------------------------------------------
+#52 - Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.
+
+lista = []
+for i in range (0, 51):
+    if i % 2 == 0:
+        print(i, end=", ")
+---------------------------------------------------------------
+#53 - Faça um programa que receba dois números inteiros e 
+# gere os números inteiros que estão no intervalo compreendido por eles.
+
+num1 = int(input("Informe o primeiro número "))
+num2 = int(input("Informe o segundo número "))
+maior = 0
+menor = 0
+
+if num1 > num2:
+    maior = num1
+    menor = num2
+else: 
+    maior = num2
+    menor = num1
+
+while maior > menor:
+    menor += 1
+    if maior > menor:
+        print(menor, end=", ")
+    
+
+--------------------------------------------------------------
+#53 - Faça um programa que receba dois números inteiros e 
+# gere os números inteiros que estão no intervalo compreendido por eles.
+#54 - Altere o programa anterior para mostrar no final a soma dos números.
+
+num1 = int(input("Informe o primeiro número "))
+num2 = int(input("Informe o segundo número "))
+maior = 0
+menor = 0
+soma = 0
+
+if num1 > num2:
+    maior = num1
+    menor = num2
+else: 
+    maior = num2
+    menor = num1
+
+while maior > menor:
+    menor += 1
+    if maior > menor:
+        soma += menor
+        print(menor, end=", ")
+
+print(f"A soma dos números é : {soma}")
+    
+    
+
+-------------------------------------------------
+#55 - Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro entre 1 a 10.
+#  O usuário deve informar de qual numero ele deseja ver a tabuada. A saída deve ser conforme o exemplo abaixo:
+
+num = int(input("Informe o número que deseja ver a tabuada: "))
+
+for i in range(1,11):
+    print(i, "x", num, " = ", i*num)
+
+----------------------------------------------
+#56 - Faça um programa que peça dois números, base e expoente, 
+# calcule e mostre o primeiro número elevado ao segundo número.
+#  Não utilize a função de potência da linguagem.
+
+base = int(input("informe a base "))
+expoente = int(input("Informe o expoente"))
+result = base
+
+for i in range(1, expoente):
+    result = result * base
+
+print(result)
+
+---------------------------------------------
+#57 - Faça um programa que peça 10 
+# números inteiros, calcule e mostre a quantidade de números pares e a quantidade de números impares.
+
+impar = 0
+par = 0
+for i in range(0,10):
+    num = int(input("Informe um número: "))
+    if num % 2 == 0:
+        par += 1
+    else: impar += 1
+
+print(f"Há {par} números pares e {impar} números ímpares") 
+    
+--------------------------------------------------------
