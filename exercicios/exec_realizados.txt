@@ -1171,3 +1171,267 @@ else:
     
 
     ---------------------------------------------------
+65 - Altere o programa de cálculo dos números primos, 
+informando, caso o número não seja primo, por quais número ele é divisível.
+
+numero = int(input("Informe um número "))
+resultado = 0
+primo = True
+lista = []
+for i in range(2,numero):
+    resultado = numero % i
+    if resultado == 0:
+        primo = False
+        lista.append(i)
+    else:
+        primo = True
+
+if primo == True and len(lista) == 0:
+    print("O número é primo")
+    
+else: 
+    print("O número não é primo")
+    print(f"O número é divisível pelos seguintes números: {lista}")
+    
+
+    -----------------------------------------------------------------------
+    #66 - Faça um programa que mostre todos os primos entre 1 e N sendo N um número 
+# inteiro fornecido pelo usuário. O programa deverá mostrar também o número
+#  de divisões que ele executou para encontrar os números primos.
+#  Serão avaliados o funcionamento, o estilo e o número de testes (divisões) executados.
+
+
+numero = int(input("Informe um número "))
+resultado = 0
+lista_naoprimos = []
+lista_primos = []
+cont_divisoes = []
+contador = 3
+
+while contador < numero:
+    for i in range(2, contador):
+        resultado = contador % i
+        if resultado == 0:
+            if contador not in lista_naoprimos:
+                lista_naoprimos.append(contador)
+                cont_divisoes.append(i -1)
+                break;
+        
+
+    if contador not in lista_naoprimos:
+        lista_primos.append(contador)
+
+    contador +=1
+
+
+for i in range(0, len(lista_primos)):
+    print(f"O número {lista_primos[i]} é primo. {lista_primos[i]-2} divsões")
+
+for i in range(0, len(lista_naoprimos)):
+    print(f"O número {lista_naoprimos[i]} não é primo. {cont_divisoes[i]} divisões ")
+
+    -----------------------------------------------------------------------------------
+    #67 - Faça um programa que calcule o mostre a média aritmética de N notas.
+
+condicao = True
+notas = []
+
+while condicao == True:
+    notas.append(float(input("Informe uma nota")))
+    condicao = int(input("Deseja continuar informando notas? Sim(1) Não(0)"))
+
+medias = sum(notas) / len(notas)
+print(f"A média é: {medias}")
+------------------------------------------------------------------------------
+
+#68 - Faça um programa que peça para n pessoas a sua idade,
+#  ao final o programa devera verificar se a média de idade da turma varia entre 0 e 25,26 e 60 e maior que 60; 
+# e então, dizer se a turma é jovem, adulta ou idosa, conforme a média calculada.
+
+condicao = True
+idade = []
+
+while condicao == True:
+    idade.append(int(input("Informe a idade ")))
+    condicao = int(input("Continuar? Sim(1) Não (0)"))
+
+media_idades = sum(idade) / len(idade)
+if media_idades <= 25:
+    print("A turma é jovem")
+elif media_idades <= 60:
+    print("A turma é Adulta")
+else: 
+    print("A turma é idosa")
+
+    --------------------------------------------------------------
+    #69 - Numa eleição existem três candidatos. Faça um programa que peça o número total de eleitores. 
+# Peça para cada eleitor votar e ao final mostrar o número de votos de cada candidato.
+
+eleitores = int(input("Informe o total de eleitores "))
+candidato_1 = 0
+candidato_2 = 0
+candidato_3 = 0
+voto = 0
+
+for i in range(0, eleitores):
+    voto = int(input("Candidato 1(1) - Candidato 2(2) - Candidato 3(3)"))
+    if voto == 1:
+        candidato_1 += 1
+    elif voto == 2:
+        candidato_2 +=1
+    else:
+        candidato_3 +=1
+    i+=1
+
+print(f"Votos candidato 1: {candidato_1}")
+print(f"Votos candidato 2: {candidato_2}")
+print(f"Votos candidato 3: {candidato_3}")
+----------------------------------------------
+#70 - Faça um programa que calcule o número médio de alunos por turma. Para isto, peça a quantidade de turmas
+#  e a quantidade de alunos para cada turma. As turmas não podem ter mais de 40 alunos.
+
+qtde_turmas = int(input("Informe a quantidade de turmas "))
+alunos = 0
+qtde_alunos = []
+
+for i in range(0, qtde_turmas):
+    alunos = int(input("Informe a quantidade de alunos "))
+    while alunos > 40:
+        print("Uma turma nao pode ter mais que 40 alunos")
+        alunos = int(input("Informe a quantidade de alunos "))
+    qtde_alunos.append(alunos)
+
+media_alunos = sum(qtde_alunos) / qtde_turmas
+print(f"A média de alunos por turma é: {media_alunos}")
+-------------------------------------------------------
+#71 - Faça um programa que calcule o valor total investido por
+#  um colecionador em sua coleção de CDs e o valor médio gasto
+#  em cada um deles. O usuário deverá informar a quantidade de CDs e o valor para em cada um.
+
+
+qtde_cd = int(input("quantidade de cs: "))
+lista_valores = []
+for i in range(0, qtde_cd):
+    lista_valores.append(float(input("Valor do cd: ")))
+
+valor_total = sum(lista_valores)
+print(f"Valor total gasto: {valor_total:.2f}")
+-----------------------------------------------------------------
+#72 - O Sr. Manoel Joaquim possui uma grande loja de artigos de R$ 1,99,
+#  com cerca de 10 caixas. Para agilizar o cálculo de quanto cada cliente
+#  deve pagar ele desenvolveu um tabela que contém o número de itens que 
+# o cliente comprou e ao lado o valor da conta. Desta forma a atendente do 
+# caixa precisa apenas contar quantos itens o cliente está levando e olhar
+#  na tabela de preços. Você foi contratado para desenvolver o programa que 
+# monta esta tabela de preços, que conterá os preços de 1 até 50 produtos,
+#  conforme o exemplo abaixo:
+#Lojas Quase Dois - Tabela de preços
+#1 - R$ 1.99
+#2 - R$ 3.98
+#...
+#50 - R$ 99.50
+
+valor = 1.99
+for i in range(1, 51):
+    v_tabela = i * valor
+    print(f"#{i} - R$ {v_tabela:.2f}")
+
+    -----------------------------------------------------------------------
+#73 - O Sr. Manoel Joaquim acaba de adquirir uma panificadora e 
+# pretende implantar a metodologia da tabelinha, que já é um sucesso na 
+# sua loja de 1,99. Você foi contratado para desenvolver o programa que monta
+#  a tabela de preços de pães, de 1 até 50 pães, a partir do preço do pão informado 
+# pelo usuário, conforme o exemplo abaixo:
+#Preço do pão: R$ 0.18
+#Panificadora Pão de Ontem - Tabela de preços
+#1 - R$ 0.18
+#2 - R$ 0.36
+#...
+#50 - R$ 9.00
+
+pao = float(input("valor do pao: "))
+
+for i in range(1, 51):
+    valor_pao = i * pao
+    print(f"#{i} - R$ {valor_pao:.2f}")
+
+    -----------------------------------------------------
+
+#74 - O Sr. Manoel Joaquim expandiu seus negócios para além dos negócios de 1,99 
+# e agora possui uma loja de conveniências. Faça um programa que implemente uma caixa 
+# registradora rudimentar. O programa deverá receber um número desconhecido de valores
+#  referentes aos preços das mercadorias. Um valor zero deve ser informado pelo operador
+#  para indicar o final da compra. O programa deve então mostrar o total da compra e perguntar
+#  o valor em dinheiro que o cliente forneceu, para então calcular e mostrar o valor do troco.
+#  Após esta operação, o programa deverá voltar ao ponto inicial, para registrar a próxima compra.
+#  A saída deve ser conforme o exemplo abaixo:
+#Lojas Tabajara 
+#Produto 1: R$ 2.20
+#Produto 2: R$ 5.80
+#Produto 3: R$ 0
+#Total: R$ 9.00
+#Dinheiro: R$ 20.00
+#Troco: R$ 11.00
+#...
+
+lista_produtos = []
+valida = True
+
+while valida == True:
+    lista_produtos.append(float(input("Valor do produto: ")))
+    valida = int(input("Continua? Si(1) Nao(0)"))
+
+for i in range(1, len(lista_produtos)+1):
+    print(f"Produto {i}: R$ {lista_produtos[i-1]}")
+total = sum(lista_produtos)
+print(f"Total: R$ {total:.2f}")
+dinheiro = float(input("Pagamento: "))
+print(f"Dinheiro: R$ {dinheiro:.2f}")
+troco = dinheiro - total
+print(f"Troco: R$ {troco:.2f}")
+----------------------------------------------------
+#75 - Faça um programa que calcule o fatorial de um número inteiro fornecido pelo usuário.
+#  Ex.: 5!=5.4.3.2.1=120. A saída deve ser conforme o exemplo abaixo:
+#Fatorial de: 5
+#5! =  5 . 4 . 3 . 2 . 1 = 120
+
+numero = int(input("Informe um número "))
+result = 1
+lista = []
+msg = ""
+
+for i in range(1, numero + 1):
+    lista.append(int(i))
+    result = result *i
+
+
+ordenada = sorted(lista, reverse=True)
+print(ordenada)
+
+print(f"{numero}! = ", end="")
+for i in range(0, len(ordenada)):
+    if ordenada[i] ==1:
+        msg = " = " 
+    else:
+        msg = " . "
+    print(f"{ordenada[i]}", end=msg)
+print(result)
+
+---------------------------------------
+#76 - O Departamento Estadual de Meteorologia lhe contratou 
+# para desenvolver um programa que leia as um conjunto indeterminado de temperaturas,
+#  e informe ao final a menor e a maior temperaturas informadas, bem como a média das temperaturas.
+
+condicao = True
+lista_temperaturas = []
+
+while condicao == True:
+    lista_temperaturas.append(float(input("Informe a temperatura ")))
+    condicao = int(input("Continua? Sim(1) Não(0)"))
+
+maior = max(lista_temperaturas)
+menor = min(lista_temperaturas)
+media = sum(lista_temperaturas) / len(lista_temperaturas)
+
+print(f"Maior: {maior} Menor: {menor} Média: {media}")
+----------------------------------------------------
