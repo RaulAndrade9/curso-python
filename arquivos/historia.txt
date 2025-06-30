@@ -1,0 +1,9 @@
+Arquivo para manipular com python
+linha 1
+Linha 2
+Linha 3
+Linha 4 - Essa linha é maior do que as outras 
+Linha 5  - Essa linha também é maior que as outras.
+
+A partir daqui há um texto escrito. Esse texto não serve para nada.
+--------------------**--------------------**--------------------
